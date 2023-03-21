@@ -2,7 +2,7 @@ import requests
 import json
 
 # Set up the API key and list ID
-api_key = '87bc850abfd0ea4973113652e85111e6-us18'
+api_key = ''
 list_id = 'a0ba715e0e'
 
 # Set up the endpoint URLs
