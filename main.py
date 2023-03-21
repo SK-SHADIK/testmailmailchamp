@@ -2,17 +2,17 @@ import requests
 import json
 
 # Set up the API key and list ID
-api_key = '02afa9ecd14cdf88099bf0ae57cdf287-us18'
+api_key = '87bc850abfd0ea4973113652e85111e6-us18'
 list_id = 'a0ba715e0e'
 
 # Set up the endpoint URLs
-root_url = 'https://us18.api.mailchimp.com/3.0/' # Replace X with your data center ID
+root_url = 'https://us18.api.mailchimp.com/3.0/'
 lists_url = root_url + 'lists/'
 campaigns_url = root_url + 'campaigns/'
 
 # Define the email content
-email_subject = 'Test Mail With Mailchimp API'
-email_body = '<html><body><h1>Hello World!</h1><p>This is a test email sent using Mailchimp API.</p></body></html>'
+email_subject = 'Test Mail With Mailchimp'
+email_body = '<html><body><h1>Hello From mailchimp</h1><p>This mail is send through mailchimp for testing</p><center><br/><br/><br/><table border="0" cellpadding="0" cellspacing="0" width="100%" id="canspamBarWrapper" style="background-color:#FFFFFF; border-top:1px solid #E5E5E5;"><tr><td align="center" valign="top" style="padding-top:20px; padding-bottom:20px;"><table border="0" cellpadding="0" cellspacing="0" id="canspamBar"><tr><td align="center" valign="top" style="color:#606060; font-family:Helvetica, Arial, sans-serif; font-size:11px; line-height:150%; padding-right:20px; padding-bottom:5px; padding-left:20px; text-align:center;">This email was sent to <a href="mailto:*|EMAIL|*" target="_blank" style="color:#404040 !important;">*|EMAIL|*</a><br/><a href="*|ABOUT_LIST|*" target="_blank" style="color:#404040 !important;"><em>why did I get this?</em></a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="*|UNSUB|*" style="color:#404040 !important;">unsubscribe from this list</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="*|UPDATE_PROFILE|*" style="color:#404040 !important;">update subscription preferences</a><br/>*|LIST:ADDRESSLINE|*<br/><br/>*|REWARDS|*</td></tr></table></td></tr></table><style type="text/css">@media only screen and (max-width: 480px){table#canspamBar td{font-size:14px !important;}table#canspamBar td a{display:block !important; margin-top:10px !important;}}</style></center></body></html>'
 
 # Define the campaign details
 campaign_data = {
@@ -56,3 +56,5 @@ else:
             print('Error sending email campaign:', response.text)
         else:
             print('Email campaign sent successfully!')
+
+
